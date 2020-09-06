@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+/* すべての画面を最初は表示しない */
+.view {
+  display: none;
+}
+
+html {
+  font-size: 1em; /* 16px */
+  line-height: 1.5; /* 24px */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Droid Sans', sans-serif;
+  color: #212121;
+  background-color: #f5f5f5;
+}
+
+/**
+ * 最初のローディング表示
+ */
+
+/* 回転するアニメーション */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**
+ * ログイン画面
+ */
+
+#login {
+  padding-top: 300px;
+}
+
+.login__help {
+  display: none;
+}
+
+/**
+ * 書籍一覧画面
+ */
+.wrapper img {
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+#book-template {
+display: none;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+header {
+  background-color: white;
+}
+
+#header {
+  display: flex;
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: relative;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.add-button {
+  text-decoration: none;
+  color: #28a745;
+  font-size: 18px;
+}
+.add-button:hover {
+  text-decoration: none;
+  color: #1f8737;
+}
+.add-button:focus {
+  text-decoration: none;
+}
+.add-button__icon {
+  vertical-align: -2px;
+}
+
+body {
+    color: white;
+    height: 300px;
+    background-color: black;
+    background-image: url('cover.jpg');
+    background-position: center center;
+    text-align: center;
+  }
+
+body h1 {
+  padding: 50px;
+}
+
+.cover {
+  color: white;
+  height: 300px;
+  background-color: black;
+  background-image: url('cover.jpg');
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.cover__title {
+  font-size: 36px;
+  letter-spacing: 10px;
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#book-list {
+  margin: 20px auto;
+}
+
+.book-item {
+  width: 270px;
+  margin: 15px;
+  float: left;
+  background-color: white;
+  border: solid 1px #ddd;
+}
+
+.book-item__image-wrapper {
+  width: 270px;
+  height: 270px;
+  padding: 10px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.book-item__image {
+  max-height: 250px;
+  max-width: 250px;
+  vertical-align: middle;
+}
+
+.book-item__detail {
+  padding: 10px;
+  background-color: #fafafa;
+  border-top: solid 1px #ddd;
+}
+
+.book-item__title {
+  margin: 0 auto;
+  height: 36px;
+  text-align: center;
+  overflow: hidden;
+  color: #212121;
+}
+
+.book-item__delete-wrapper {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.book-item__delete {
+  color: #dc3545;
+  background-color: transparent;
+  border-color: #dc3545;
+}
+.book-item__delete:hover {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.book-item__delete:focus {
+  outline-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+@media (min-width: 375px) {
+  /* 375px以下に適用されるCSS（スマホ用） */
+
+  h1 {
+    font-size: 25px;
+  }
+
+  header {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .clearfix {
+    margin: 20px auto;
+  }
+
+  .wrapper {
+    
+    margin: 0 auto;
+  }
+
+  .cover__title {
+    margin: 0 auto;
+    font-size: 3px;
+    letter-spacing: 3px;
+  }
+
+  body h1 {
+    padding: 20px;
+  }
+
+  .clearfix {
+    margin: 20px auto;
+  }
+
+
+  @media (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+  }
+
+}
